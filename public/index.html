@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>ENVIRO</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -24,38 +24,81 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
     <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+      @import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;300;500&family=Nunito+Sans:wght@200;300;400;700&display=swap');
+      header {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
       }
+      body { background: linear-gradient(180deg, #FFFFFF 9.38%, #ADFC92 100%); font-family: sans-serif; margin: 0; padding: 0; height: 100%; margin: 0; background-repeat: no-repeat; background-attachment: fixed; }
+      h1 { text-align: center; font-family: 'Exo', sans-serif; font-style: normal; font-weight: 300; font-size: 81.3684px; line-height: 108px; color: #000000; mix-blend-mode: normal;}
+      h2 { text-align: center; width: 811px; height: 61px; left: 351px; top: 196px; font-family: 'Nunito Sans', sans-serif; font-style: normal; font-weight: 200; font-size: 45px; line-height: 61px; color: #000000;}
+      p { text-align: center; font-family: 'Nunito Sans'; font-style: normal; font-weight: 200; font-size: 30px; top: 200px; line-height: 41px; color: #000000;}
+      #tool h1 { font-family: 'Exo'; font-style: normal; font-weight: 200; font-size: 50px; line-height: 66px; color: #000000; mix-blend-mode: normal; }
+      #tool h2 { font-family: 'Exo'; font-style: normal; font-weight: 500; font-size: 20px; line-height: 27px; color: #0C8346; }
+      
+      .toolcard{width: 1186; height: 504; background: #FFFFFF; box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25); border-radius: 30px;}
+      html {
+        height: 100%;
+      }
+
     </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Sa said hakkama!/h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <h1>ENVIRO</h1>
+    <embed src="enviro_logo.svg" />
+    <h2>Go green in your technology architecture</h2>
+    <p>ENVIRO gives you a tool for developing the smallest possible footprint for your software’s architecture. Narrow down the specifics and select your current technologies.</p>
+    <h1 id="tool">Evaluate Your Technologies</h1>
+    <div class="toolcard">
+      <embed src="backend.svg" />
+      <embed src="frontend.svg" />
+      <embed src="database.svg" />
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
+    <h2 id="tool">Frontend</h1>
+    <form>
+      <input type="radio" id="angular" name="frontend" value="Angular">
+      <label for="angular">Angular</label><br>
+      <input type="radio" id="pyscript" name="frontend" value="Pyscript">
+      <label for="pyscript">Pyscript</label><br>
+      <input type="radio" id="react" name="frontend" value="React">
+      <label for="react">React</label>
+      <input type="radio" id="svelte" name="frontend" value="Svelte">
+      <label for="svelte">Svelte</label>
+    </form>
+    <h2 id="tool">Backend</h1> 
+    <form>
+      <input type="radio" id="django" name="backend" value="Django">
+      <label for="django">Django</label><br>
+      <input type="radio" id="express-js" name="backend" value="Express-JS">
+      <label for="express-js">Express-JS</label><br>
+      <input type="radio" id="laravel" name="backend" value="Laravel">
+      <label for="laravel">Laravel</label>
+      <input type="radio" id="ruby-on-rails" name="backend" value="Ruby on Rails">
+      <label for="ruby-on-rails">Ruby on Rails</label>
+    </form> 
+    <h2 id="tool">Database</h1>
+    <form>
+      <input type="radio" id="cassandra" name="database" value="Cassandra">
+      <label for="cassandra">Cassandra</label><br>
+      <input type="radio" id="firebase" name="database" value="Firebase">
+      <label for="firebase">Firebase</label><br>
+      <input type="radio" id="mongodb" name="database" value="MongoDB">
+      <label for="mongodb">MongoDB</label>
+      <input type="radio" id="mysql" name="database" value="MySQL">
+      <label for="mysql">MySQL</label>
+    </form> 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
+        // https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         //
         // firebase.auth().onAuthStateChanged(user => { });
         // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.firestore().collection('nodes').doc('bar').get().then(() => { });
         // firebase.functions().httpsCallable('yourFunction')().then(() => { });
         // firebase.messaging().requestPermission().then(() => { });
         // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
